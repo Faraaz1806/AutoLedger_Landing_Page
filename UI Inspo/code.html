@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEON LEDGER | ExpTrack</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-dim": "#cce481",
+                    "on-secondary-container": "#fffbb3",
+                    "inverse-surface": "#fcf9f8",
+                    "on-tertiary-fixed-variant": "#625400",
+                    "inverse-on-surface": "#565555",
+                    "on-surface-variant": "#adaaaa",
+                    "on-error-container": "#ffd2c8",
+                    "on-tertiary-fixed": "#423800",
+                    "on-primary-container": "#1d2600",
+                    "surface-bright": "#2c2c2c",
+                    "error": "#ff7351",
+                    "on-tertiary-container": "#574a00",
+                    "primary-fixed": "#daf38d",
+                    "tertiary-fixed-dim": "#e5c930",
+                    "secondary-fixed-dim": "#deda48",
+                    "surface": "#0e0e0e",
+                    "inverse-primary": "#53660f",
+                    "on-secondary-fixed-variant": "#615e00",
+                    "outline": "#767575",
+                    "tertiary-container": "#f4d73e",
+                    "secondary": "#ede855",
+                    "secondary-dim": "#deda48",
+                    "surface-variant": "#262626",
+                    "on-primary": "#495c02",
+                    "error-container": "#b92902",
+                    "tertiary-dim": "#e5c930",
+                    "background": "#0e0e0e",
+                    "on-background": "#ffffff",
+                    "primary-container": "#93a94d",
+                    "surface-tint": "#daf38d",
+                    "outline-variant": "#484847",
+                    "surface-container-highest": "#262626",
+                    "on-surface": "#ffffff",
+                    "surface-container-low": "#131313",
+                    "surface-container-lowest": "#000000",
+                    "surface-container": "#1a1919",
+                    "tertiary-fixed": "#f4d73e",
+                    "surface-container-high": "#201f1f",
+                    "secondary-fixed": "#ede855",
+                    "error-dim": "#d53d18",
+                    "on-primary-fixed-variant": "#53660f",
+                    "on-secondary-fixed": "#434100",
+                    "on-primary-fixed": "#394800",
+                    "primary": "#daf38d",
+                    "primary-fixed-dim": "#cce481",
+                    "tertiary": "#ffe56b",
+                    "on-error": "#450900",
+                    "on-tertiary": "#615300",
+                    "surface-dim": "#0e0e0e",
+                    "on-secondary": "#565400",
+                    "secondary-container": "#646100"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-matrix {
+            background-image: radial-gradient(circle, rgba(218, 243, 141, 0.05) 1.5px, transparent 1.5px);
+            background-size: 16px 16px;
+        }
+        .tonal-shift-pave {
+            background: linear-gradient(180deg, #131313 0%, #0e0e0e 100%);
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .glow-soft {
+            box-shadow: 0 0 40px -10px rgba(218, 243, 141, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-stone-950/80 backdrop-blur-2xl flex justify-between items-center px-6 h-20 w-full shadow-[0_4px_30px_rgba(218,243,141,0.08)]">
+<div class="text-lg font-black tracking-tighter text-lime-300">NEON LEDGER</div>
+<div class="hidden md:flex gap-8 items-center font-['Plus_Jakarta_Sans'] uppercase tracking-[0.05em] font-semibold text-zinc-400">
+<a class="text-lime-300 hover:text-lime-200 transition-all duration-300" href="#">EXPLORE</a>
+<a class="hover:text-lime-200 hover:scale-105 transition-all duration-300" href="#">SECURITY</a>
+<a class="hover:text-lime-200 hover:scale-105 transition-all duration-300" href="#">UTILITY</a>
+</div>
+<button class="bg-primary text-on-primary font-['Plus_Jakarta_Sans'] font-semibold px-6 py-2.5 rounded-full hover:scale-105 active:scale-95 transition-all duration-300 text-sm tracking-wide">
+            DOWNLOAD
+        </button>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative px-6 pt-16 pb-32 overflow-hidden">
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -z-10"></div>
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<span class="label-small text-primary tracking-[0.2em] mb-6 text-[10px] font-bold uppercase">v2.4 — Offline &amp; Private</span>
+<h1 class="text-[3.5rem] leading-[1.1] font-extrabold tracking-[-0.04em] mb-8 max-w-3xl">
+                    Zero Manual Entry. <br/>
+<span class="text-primary italic">Full Clarity.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-xl mb-12 leading-relaxed">
+                    The only expense tracker that reads your bank SMS automatically. 100% offline. 100% private.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mb-24">
+<button class="bg-primary text-on-primary h-14 px-8 rounded-full font-bold flex items-center justify-center gap-3 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">download</span>
+                        DOWNLOAD FOR ANDROID
+                    </button>
+</div>
+<!-- Mockup Section -->
+<div class="relative w-full max-w-4xl mx-auto mt-8">
+<div class="glass-panel border-t border-primary/20 rounded-[2.5rem] p-4 glow-soft">
+<div class="bg-surface rounded-[2rem] overflow-hidden aspect-[16/9] md:aspect-[21/9] relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="high-tech smartphone interface displaying lime green financial charts and sleek data visualizations on a dark black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC623hKhSp6Bi-DEBWVI23qNCfJgZY_upb7ORultaezrsWBkhVJKRCTHKvP1aAa-vsupdioZifYEwAbazgF-U8pNTJ4T21nyUlV6Bc9MdBu33CGQ0b2Ngcbi1KZ72OowUs1vx-OWtkQan01DQtu9rg7kk4iajvKp1DoOQF9LQmcoDWP3qHhPyBneTAAmP0eqW6ZveNps0shNrv1-ZEo9x7h1RtjzLhHvJNco3yOobmYBaYk1XnUfsULVRlOJzw-6GvoabD9ogOrol0Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-left">
+<div class="text-primary font-bold text-4xl mb-2">₹12,480.00</div>
+<div class="text-on-surface-variant text-xs tracking-widest uppercase">Monthly Spend — Sept 2024</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works: Step by Step -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-left">
+<h2 class="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4">The Protocol</h2>
+<h3 class="text-3xl font-bold tracking-tight">How automated logging works.</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1 px-4">
+<!-- Step 1 -->
+<div class="relative group p-8 bg-surface-container-high rounded-xl border-l-2 border-primary/10 hover:border-primary transition-colors">
+<div class="text-primary/30 text-5xl font-black mb-6">01</div>
+<h4 class="text-xl font-bold mb-4">SMS Received</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Incoming transaction alerts are intercepted by our local engine instantly.</p>
+<span class="absolute top-8 right-8 material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">sms</span>
+</div>
+<!-- Step 2 -->
+<div class="relative group p-8 bg-surface-container-high rounded-xl border-l-2 border-primary/10 hover:border-primary transition-colors">
+<div class="text-primary/30 text-5xl font-black mb-6">02</div>
+<h4 class="text-xl font-bold mb-4">Local Parsing</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Our offline AI extracts amount, merchant, and bank info within milliseconds.</p>
+<span class="absolute top-8 right-8 material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">memory</span>
+</div>
+<!-- Step 3 -->
+<div class="relative group p-8 bg-surface-container-high rounded-xl border-l-2 border-primary/10 hover:border-primary transition-colors">
+<div class="text-primary/30 text-5xl font-black mb-6">03</div>
+<h4 class="text-xl font-bold mb-4">Auto-Logging</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Your dashboard updates immediately. No cloud, no internet, no friction.</p>
+<span class="absolute top-8 right-8 material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">verified_user</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Grid (Pulse Card Style) -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="dotted-matrix bg-surface-container-high p-8 rounded-xl border-t border-primary/20 flex flex-col h-full glow-soft">
+<span class="material-symbols-outlined text-primary text-3xl mb-12" style="font-variation-settings: 'FILL' 1;">category</span>
+<h4 class="text-lg font-bold mb-4">Smart Categorization</h4>
+<p class="text-on-surface-variant text-sm">Automatically tags expenses based on merchant signatures and past behavior.</p>
+</div>
+<!-- Feature 2 -->
+<div class="dotted-matrix bg-surface-container-high p-8 rounded-xl border-t border-primary/20 flex flex-col h-full glow-soft">
+<span class="material-symbols-outlined text-primary text-3xl mb-12" style="font-variation-settings: 'FILL' 1;">alternate_email</span>
+<h4 class="text-lg font-bold mb-4">UPI Nicknames</h4>
+<p class="text-on-surface-variant text-sm">Clean up messy VPA strings into readable merchant names instantly.</p>
+</div>
+<!-- Feature 3 -->
+<div class="dotted-matrix bg-surface-container-high p-8 rounded-xl border-t border-primary/20 flex flex-col h-full glow-soft lg:translate-y-8">
+<span class="material-symbols-outlined text-primary text-3xl mb-12" style="font-variation-settings: 'FILL' 1;">insights</span>
+<h4 class="text-lg font-bold mb-4">Deep Analytics</h4>
+<p class="text-on-surface-variant text-sm">Interactive heatmaps and velocity charts to spot your spending leaks.</p>
+</div>
+<!-- Feature 4 -->
+<div class="dotted-matrix bg-surface-container-high p-8 rounded-xl border-t border-primary/20 flex flex-col h-full glow-soft lg:translate-y-8">
+<span class="material-symbols-outlined text-primary text-3xl mb-12" style="font-variation-settings: 'FILL' 1;">database</span>
+<h4 class="text-lg font-bold mb-4">CSV Export</h4>
+<p class="text-on-surface-variant text-sm">Own your data. Export your entire history to Excel or Google Sheets anytime.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy First Section -->
+<section class="py-32 px-6 tonal-shift-pave overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-8">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase">Privacy Manifest</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Your data stays on your phone.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10 max-w-xl">
+                        We don't need your bank login. We don't need your email. We don't even need the internet. ExpTrack is a local-first utility built for total financial sovereignty.
+                    </p>
+<div class="grid grid-cols-2 gap-y-6 gap-x-12">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">cloud_off</span>
+<span class="text-sm font-medium">No Cloud Storage</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">lock</span>
+<span class="text-sm font-medium">No Tracking</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">wifi_off</span>
+<span class="text-sm font-medium">No Internet Req.</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">person_off</span>
+<span class="text-sm font-medium">No Bank Login</span>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square glass-panel rounded-full flex items-center justify-center glow-soft border border-primary/10">
+<span class="material-symbols-outlined text-primary text-9xl animate-pulse" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Table -->
+<section class="py-32 px-6">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tight">ExpTrack vs Others</h2>
+</div>
+<div class="overflow-hidden rounded-2xl border border-outline-variant bg-surface-container-low">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-6 text-xs uppercase tracking-widest font-bold text-on-surface-variant">Feature</th>
+<th class="p-6 text-xs uppercase tracking-widest font-bold text-primary text-center">ExpTrack</th>
+<th class="p-6 text-xs uppercase tracking-widest font-bold text-zinc-500 text-center">Modern Apps</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr>
+<td class="p-6 text-sm font-medium">Privacy Priority</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-zinc-700">cancel</span></td>
+</tr>
+<tr>
+<td class="p-6 text-sm font-medium">Offline Mode</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-zinc-700">cancel</span></td>
+</tr>
+<tr>
+<td class="p-6 text-sm font-medium">No Subscriptions</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-zinc-700">cancel</span></td>
+</tr>
+<tr>
+<td class="p-6 text-sm font-medium">Auto-Tracking</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="p-6 text-center text-sm text-zinc-500 italic">Manual Entry Only</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-6">
+<div class="max-w-5xl mx-auto glass-panel rounded-[3rem] p-12 md:p-20 text-center border border-primary/20 glow-soft relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"></div>
+<h2 class="text-3xl md:text-5xl font-extrabold mb-8">Take control of your finances today.</h2>
+<button class="bg-primary text-on-primary h-16 px-12 rounded-full font-black text-lg hover:scale-105 transition-transform flex items-center justify-center gap-4 mx-auto">
+                    DOWNLOAD EXPTRACK APK
+                    <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+<p class="mt-8 text-on-surface-variant text-sm uppercase tracking-widest font-bold">Free forever. No ads. No BS.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 border-t border-zinc-900 bg-zinc-950">
+<div class="flex flex-col md:flex-row items-center justify-between gap-12 max-w-7xl mx-auto">
+<div class="text-lime-300 font-bold text-lg">NEON LEDGER</div>
+<div class="flex gap-10">
+<a class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-widest font-medium uppercase text-zinc-500 hover:text-white transition-colors duration-200" href="#">PRIVACY</a>
+<a class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-widest font-medium uppercase text-zinc-500 hover:text-white transition-colors duration-200" href="#">TERMS</a>
+<a class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-widest font-medium uppercase text-zinc-500 hover:text-white transition-colors duration-200" href="#">SECURITY</a>
+</div>
+<div class="font-['Plus_Jakarta_Sans'] text-[10px] tracking-widest font-medium uppercase text-zinc-500">
+                © 2024 NEON LEDGER. HIGH-STAKES FINANCE.
+            </div>
+</div>
+</footer>
+</body></html>

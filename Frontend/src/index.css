@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+/* ========================================
+   AUTOLEDGER DESIGN SYSTEM v2
+   ======================================== */
+
+:root {
+  --surface: #0a0a0a;
+  --primary: #daf38d;
+  --primary-dark: #1a2800;
+  --text-primary: #f0f0f0;
+  --text-secondary: #8a8a8a;
+  --text-muted: #555;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--surface);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-dark);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #242424; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* ---- Utility classes ---- */
+.dotted-matrix {
+  background-image: radial-gradient(circle, rgba(218, 243, 141, 0.035) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.glass-panel {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(24px) saturate(1.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
+}
+
+.text-lime-gradient {
+  background: linear-gradient(135deg, #daf38d 0%, #c8e074 50%, #ede855 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Animations ---- */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes subtle-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===========================================================
+   RESPONSIVE COMPONENT CLASSES
+   These handle show/hide and layout switching for components
+   that can't use Tailwind responsive utilities with inline styles.
+   =========================================================== */
+
+/* --- Navbar --- */
+.nav-desktop-links {
+  display: none;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-link-item {
+  color: #8a8a8a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-link-item:hover {
+  color: #daf38d;
+}
+
+.nav-download-btn {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: #daf38d;
+  color: #1a2800;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s;
+}
+.nav-download-btn:hover {
+  transform: scale(1.03);
+}
+
+.nav-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .nav-download-btn {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-desktop-links {
+    display: flex;
+  }
+  .nav-hamburger {
+    display: none;
+  }
+}
+
+/* --- Privacy Section Responsive --- */
+.privacy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.privacy-text {
+  text-align: center;
+}
+
+.privacy-desc {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.privacy-points {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .privacy-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+  }
+  .privacy-text {
+    text-align: left;
+  }
+  .privacy-desc {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .privacy-points {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .privacy-shield {
+    width: 288px;
+    height: 288px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .privacy-shield {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* --- Footer Responsive --- */
+.footer-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .footer-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* --- Comparison Responsive --- */
+.comparison-table-desktop {
+  display: none;
+}
+
+.comparison-cards-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .comparison-table-desktop {
+    display: block;
+  }
+  .comparison-cards-mobile {
+    display: none;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 56px;
+  width: 100%;
+  max-width: 360px;
+}
+
+@media (min-width: 640px) {
+  .hero-buttons {
+    flex-direction: row;
+    max-width: 460px;
+    gap: 14px;
+    margin-bottom: 80px;
+  }
+}
+
+.hero-btn-primary {
+  background: #daf38d;
+  color: #1a2800;
+  height: 52px;
+  border-radius: 9999px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 0 50px rgba(218, 243, 141, 0.2);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 24px;
+}
+
+@media (min-width: 640px) {
+  .hero-btn-primary {
+    flex: 1;
+    width: auto;
+  }
+}
+
+.hero-btn-secondary {
+  height: 52px;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #8a8a8a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s, color 0.3s;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 24px;
+}
+
+@media (min-width: 640px) {
+  .hero-btn-secondary {
+    flex: 1;
+    width: auto;
+  }
+}
+
+.hero-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  color: white;
+}
+
