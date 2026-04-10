@@ -72,7 +72,7 @@ export default function Navbar() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             {/* Download — hidden below 640px */}
             <a
-              href="/AutoLedger.apk"
+              href="https://github.com/Faraaz1806/AutoLedger_Landing_Page/releases/latest/download/AutoLedger.apk"
               download="AutoLedger.apk"
               id="nav-download-btn"
               className="nav-download-btn"
@@ -136,7 +136,7 @@ export default function Navbar() {
               </div>
 
               <motion.a
-                href="/AutoLedger.apk"
+                href="https://github.com/Faraaz1806/AutoLedger_Landing_Page/releases/latest/download/AutoLedger.apk"
                 download="AutoLedger.apk"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

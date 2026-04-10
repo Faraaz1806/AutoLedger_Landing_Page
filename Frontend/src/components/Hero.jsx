@@ -93,7 +93,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.38, ease }}
           className="hero-buttons"
         >
-          <a href="/AutoLedger.apk" download="AutoLedger.apk" id="hero-download-btn" className="hero-btn-primary">
+          <a href="https://github.com/Faraaz1806/AutoLedger_Landing_Page/releases/latest/download/AutoLedger.apk" download="AutoLedger.apk" id="hero-download-btn" className="hero-btn-primary">
             <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>download</span>
             Download for Android
           </a>

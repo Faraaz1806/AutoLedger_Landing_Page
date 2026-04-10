@@ -94,7 +94,7 @@ export default function CTA() {
 
           {/* Button */}
           <motion.a
-            href="/AutoLedger.apk"
+            href="https://github.com/Faraaz1806/AutoLedger_Landing_Page/releases/latest/download/AutoLedger.apk"
             download="AutoLedger.apk"
             id="cta-download-btn"
             initial={{ opacity: 0, y: 20 }}
