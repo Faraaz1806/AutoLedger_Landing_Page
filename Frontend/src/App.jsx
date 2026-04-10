@@ -6,6 +6,7 @@ import Privacy from './components/Privacy';
 import Comparison from './components/Comparison';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import InAppBrowserBanner from './components/InAppBrowserBanner';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <CTA />
       </main>
       <Footer />
+      <InAppBrowserBanner />
     </div>
   );
 }
